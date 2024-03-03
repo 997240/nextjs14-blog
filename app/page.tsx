@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
 import {sanityClient, urlFor} from "@/app/lib/sanity";
 import {simpleBlogCard} from "@/app/lib/interface";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,8 +16,7 @@ titleImage
 }
 `;
 
-    const data: simpleBlogCard[] = await sanityClient.fetch(query);
-    return data;
+    return await sanityClient.fetch(query);
 }
 
 
@@ -56,7 +54,7 @@ export default async function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
                 {
-                    data.map((item, index) => {
+                    data.map((item: any, index: number) => {
                         return (
                             <Card key={index}>
 
