@@ -1,0 +1,11 @@
+.flexContainer {
+    display: flex;
+}
+
+.flexItem {
+    flex: 1 1 auto; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+    width: 100px; /* 新添加的宽度 */
+}
+.flexItem {
+    flex: 1 1 100px; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+}
