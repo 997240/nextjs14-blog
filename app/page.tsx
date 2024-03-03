@@ -58,12 +58,15 @@ export default async function Home() {
                         return (
                             <Card key={index}>
 
-                                <Image
-                                    alt={item.title}
-                                    src={urlFor(item.titleImage).url()}
-                                    width={300}
-                                    height={300}
-                                />
+                                <div className="w-[300px] h-[300px] overflow-hidden">
+                                    <Image
+                                        alt={item.title}
+                                        src={urlFor(item.titleImage).url()}
+                                        width={300}
+                                        height={300}
+                                        className="object-cover object-center"
+                                    />
+                                </div>
                                 <CardContent>
                                     <h3 className="text-lg line-clamp-2 font-bold">{item.title}</h3>
                                     <p className="text-sm line-clamp-3 mt-2 font-medium">
